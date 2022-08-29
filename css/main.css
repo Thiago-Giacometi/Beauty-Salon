@@ -37,15 +37,16 @@ a {
 .hero {
   display: flex;
   align-items: center;
-  gap: 35px;
 
-  padding: 90px 72px;
+  padding: 0px 72px;
 }
 
 .hero-text {
   display: flex;
   flex-direction: column;
   gap: 16px;
+
+  flex: 1;
 }
 
 .hero-text h1 {
@@ -74,6 +75,11 @@ a {
   color: white;
   width: 220px;
   border: none;
+}
+
+.hero-image {
+  align-self: flex-end;
+  flex: 1;
 }
 
 .hero-image img {
