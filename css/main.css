@@ -12,13 +12,15 @@ a {
   text-decoration: none;
 }
 
+
+
 /* HEADER */
 
 .header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 32px 72px;
+  padding: 20px;
 }
 
 .btn {
@@ -28,7 +30,8 @@ a {
   border-radius: 90px;
 
   font-weight: 600;
-  font-size: 16px;
+  font-size: 14px;
+  line-height: 22px;
   color: #000000;
 }
 
@@ -36,55 +39,69 @@ a {
 
 .hero {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: left;
 
-  padding: 0px 72px;
+  padding: 48px 20px 0 20px;
 }
 
 .hero-text {
   display: flex;
   flex-direction: column;
   gap: 16px;
-
-  flex: 1;
+  margin-bottom: 48px;
 }
 
 .hero-text h1 {
   font-family: 'Playfair Display';
   font-weight: 700;
-  font-size: 56px;
-  line-height: 64px;
+  font-size: 32px;
+  line-height: 40px;
   text-align: left;
   color: #0A0A0A;
 }
 
 .hero-text p {
   font-weight: 400;
-  font-size: 20px;
-  line-height: 28px;
+  font-size: 16px;
+  line-height: 24px;
 
   color: #3C3640;
 }
 
 .btn-wpp {
   display: flex;
+  justify-content: center;
   align-items: center;
   gap: 22px;
-  padding: 20px 40px;
+  padding: 20px 60px;
   background-color: #AF05AA;
   color: white;
-  width: 220px;
   border: none;
+  margin-bottom: 16px;
+  max-width: 320px;
 }
 
-.hero-image {
-  align-self: flex-end;
-  flex: 1;
+.btn-wpp a {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  color: #fff;
+}
+
+.img {
+  min-width: 320px;
+  max-width: 350px;
+  width: 100%;
 }
 
 .hero-image img {
+  min-width: 320px;
+  max-width: 520px;
   width: 100%;
 }
+
+
 
 /* SERVICES */
 
@@ -93,26 +110,29 @@ a {
 }
 
 .services {
-  padding: 96px 72px;
+  padding: 48px 20px;
 }
 
 .services-header h2 {
-  font-size: 16px;
   font-weight: 700;
+  font-size: 12px;
+  line-height: 16px;
   color: #AF05AA;
   margin-bottom: 16px;
 }
 
 .services-header p {
   font-family: 'Playfair Display';
-  font-size: 44px;
   font-weight: 700;
+  font-size: 28px;
+  line-height: 36px;
   color: #000000;
   margin-bottom: 48px;
 }
 
 .services-cards {
   display: flex;
+  flex-direction: column;
   align-items: center;
   gap: 32px;
 }
@@ -151,12 +171,13 @@ a {
 /* MAP */
 
 .map-header {
-  padding: 96px 72px 48px 72px;
+  padding: 48px 20px 26px 20px;
 }
 
 .map-header h2 {
-  font-size: 16px;
   font-weight: 700;
+  font-size: 12px;
+  line-height: 16px;
   color: #AF05AA;
   margin-bottom: 16px;
 }
@@ -164,8 +185,8 @@ a {
 .map-header p {
   font-family: 'Playfair Display';
   font-weight: 700;
-  font-size: 44px;
-  margin-bottom: 24px;
+  font-size: 28px;
+  line-height: 36px;
 }
 
 .map-header address {
@@ -180,20 +201,22 @@ iframe {
 
 /* FOOTER */
 
-#footer-container{
+#footer-container {
   background-color: #EA21A2;
 }
 
 .footer {
-  padding: 48px 72px;
+  padding: 48px 20px;
 
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
+  gap: 10px;
 
 }
 
-.footer-text{
+.footer-text {
   color: white;
   display: flex;
   flex-direction: column;
@@ -203,4 +226,102 @@ iframe {
 .footer-icons {
   display: flex;
   gap: 30px;
+}
+
+@media (min-width: 720px) {
+  /* HEADER */
+
+  .header {
+    padding: 32px 72px;
+  }
+
+  .header svg {
+    width: 116px;
+  }
+
+  /* HERO */
+
+  .hero {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 72px;
+  }
+
+  .hero-text {
+    margin-bottom: 0;
+    flex: 1;
+  }
+
+  .hero-text h1 {
+    font-weight: 700;
+    font-size: 56px;
+    line-height: 64px;
+  }
+
+  .hero-text p {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  .hero-image img {
+    width: auto;
+    flex: 1;
+  }
+
+
+
+  /* SERVICES */
+
+  #container-services {
+    background-color: #FFFFFF;
+  }
+
+  .services {
+    padding: 96px 72px;
+  }
+
+  .services-header h2 {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .services-header p {
+    font-weight: 700;
+    font-size: 44px;
+    line-height: 56px;
+  }
+
+  .services-cards {
+    flex-direction: row;
+  }
+
+  /* MAP */
+
+  .map-header {
+    padding: 48px 20px 26px 20px;
+  }
+
+  .map-header h2 {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .map-header p {
+    font-weight: 700;
+    font-size: 44px;
+    line-height: 56px;
+  }
+
+  /* FOOTER */
+
+  .footer {
+    padding: 48px 72px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
 }
